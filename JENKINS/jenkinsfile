@@ -15,6 +15,10 @@ pipeline {
             steps {
                 sh'echo"Deploying new software"'  
             }
+       stage('Run') { 
+            steps {
+                sh'echo"Running new software"'  
+            }
         }
     }
 }
