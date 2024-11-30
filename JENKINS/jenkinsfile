@@ -15,9 +15,11 @@ pipeline {
             steps {
                 sh'echo"Deploying new software"'  
             }
-       stage('Run') { 
+       stage('CPU details') { 
             steps {
-                sh'echo"Running new software"'  
+                sh '''
+                lscpu
+                '''  
             }
         }
     }
