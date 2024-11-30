@@ -1,0 +1,20 @@
+pipeline {
+    agent any 
+    stages {
+        stage('Build') { 
+            steps {
+                sh ' echo "Iam Building an Imange on the Docker"' 
+            }
+        }
+        stage('Test') { 
+            steps {
+                sh ' echo "Iam Testing an Imange on the Docker"'  
+            }
+        }
+        stage('Deploy') { 
+            steps {
+                /sh ' echo "Iam Deploying an Imange on the Docker"'  
+            }
+        }
+    }
+}
