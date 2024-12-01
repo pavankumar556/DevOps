@@ -3,25 +3,25 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh'echo"Building new image on docker"' 
+                sh'echo"Buliding an innvoative software"' 
             }
         }
         stage('Test') { 
             steps {
-                sh'echo"Testing new software"'  
+                sh'echo"Testing an innvoative software"' 
             }
         }
         stage('Deploy') { 
             steps {
-                sh'echo"Deploying new software"'  
+                sh'echo"Deploying an innvoative software"'  
             }
-       stage('CPU details') { 
-            steps {
+        }
+        stage('CPU details'){
+            steps{
                 sh '''
                 lscpu
                 '''  
             }
         }
     }
-}
 }
