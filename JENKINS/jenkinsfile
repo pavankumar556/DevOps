@@ -3,17 +3,17 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh'echo"Buliding an innvoative software"' 
+                sh 'echo "Buliding an innvoative software"' 
             }
         }
         stage('Test') { 
             steps {
-                sh'echo"Testing an innvoative software"' 
+                sh 'echo "Testing an innvoative software"' 
             }
         }
         stage('Deploy') { 
             steps {
-                sh'echo"Deploying an innvoative software"'  
+                sh 'echo"Deploying an innvoative software"'  
             }
         }
         stage('CPU details'){
