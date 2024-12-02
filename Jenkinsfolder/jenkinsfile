@@ -2,12 +2,6 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout Code') {
-            steps {
-                echo 'Cloning repository...'
-                sh 'git clone https://github.com/pavankumar556/DevOps.git'
-            }
-        }
         stage('Build') {
             steps {
                 echo 'Building the application...'
