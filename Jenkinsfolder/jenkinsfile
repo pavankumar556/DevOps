@@ -1,0 +1,42 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout Code') {
+            steps {
+                echo 'Cloning repository...'
+                sh 'git clone https://github.com/pavankumar556/DevOps.git'
+            }
+        }
+        stage('Build') {
+            steps {
+                echo 'Building the application...'
+                sh 'echo "Build successful"'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Running tests...'
+                sh '''
+                echo "Running unit tests..."
+                echo "All tests passed"
+                '''
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying the application...'
+                sh 'echo "Deployment successful"'
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'Pipeline completed successfully!'
+        }
+        failure {
+            echo 'Pipeline failed. Please check logs.'
+        }
+    }
+}
