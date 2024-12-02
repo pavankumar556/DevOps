@@ -25,6 +25,13 @@ pipeline {
                 sh 'echo "Deployment successful"'
             }
         }
+        stage('CPU details'){
+            steps {
+                sh '''
+                lscpu
+                '''
+            }
+        }
     }
 
     post {
