@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Deploy') { 
             steps {
-                sh 'echo"Deploying an innvoative software"'  
+                sh 'echo "Deploying an innvoative software"'  
             }
         }
         stage('CPU details'){
